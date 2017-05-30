@@ -9,7 +9,7 @@
 	<h1>Inserisci nel catalogo una nuova opera</h1>
 	<hr>
 	<div align="center">
-		<form action="" method="">
+		<form action="controller" method="post">
 			<table>
 				<tr>
 					<td align="right">Titolo*:</td>
@@ -26,9 +26,9 @@
 				</tr>
 					
 				<tr>
-					<td align="right">Valore*:</td>
-					<td><input type="text" name="valore" autofocus="autofocus" placeholder="valore"
-								value="${opera.valore}" />
+					<td align="right">Dimensioni*:</td>
+					<td><input type="text" name="dimensione" autofocus="autofocus" placeholder="00x00x00"
+								value="${opera.dimensione}" />
 					</td>
 					<td>${errValore}</td>
 				</tr>

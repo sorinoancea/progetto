@@ -12,7 +12,7 @@ public class Opera {
 	private String titolo;
 	private Date periodo;
 	private String tecnica;
-	private float valore;
+	private float dimensioni;
 	@ManyToMany(mappedBy="opere")
 	private List <Artista> artisti;
 
@@ -46,11 +46,11 @@ public class Opera {
 	public void setTecnica(String tecnica) {
 		this.tecnica = tecnica;
 	}
-	public float getValore() {
-		return valore;
+	public float getDimensione() {
+		return dimensioni;
 	}
-	public void setValore(float f) {
-		this.valore = f;
+	public void setDimensione(float f) {
+		this.dimensioni = f;
 	}
 
 }

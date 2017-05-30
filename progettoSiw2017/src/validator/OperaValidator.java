@@ -15,7 +15,7 @@ public class OperaValidator {
 		String titolo = request.getParameter("titolo");
 		String tecnica = request.getParameter("tecnica");
 		String valore = request.getParameter("valore");
-		String periodo = request.getParameter("anno");
+		String descrizione = request.getParameter("descrizione");
 		Opera opera = (Opera)request.getAttribute("opera");
 		
 		if(titolo == null || titolo.equals("")) {
@@ -35,21 +35,21 @@ public class OperaValidator {
 			tuttoOk = false;
 		} else {
 			try {
-				opera.setValore(Float.parseFloat(valore));
+				opera.setDimensione(Float.parseFloat(valore));
 			} catch (NumberFormatException e) {
-				request.setAttribute("errValore", "Deve essere un numero!");
+				request.setAttribute("errDescrizioe", "Deve essere un format di dimensioni!");
 				tuttoOk = false;
 			}
 		}
 		
-		if(periodo == null || periodo.equals("")) {
+		if(descrizione == null || descrizione.equals("")) {
 			request.setAttribute("errPeriodo", "Campo obbligatorio");
 			tuttoOk = false;
 		} else {
 			try {
 				DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-				opera.setPeriodo(df.parse(periodo));
-				if(df.parse(periodo).compareTo(new Date()) > 0) {
+				opera.setPeriodo(df.parse(descrizione));
+				if(df.parse(descrizione).compareTo(new Date()) > 0) {
 					request.setAttribute("errPeriodo", "Deve essere una data entro la data attuale!");
 					tuttoOk = false;
 				}
