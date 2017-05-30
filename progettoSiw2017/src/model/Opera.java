@@ -4,12 +4,15 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
+@NamedQuery(name="findAll", query="SELECT o FROM opera o")
 public class Opera {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long id;   
 	private String titolo;
-	private String anno;
+	private Date periodo;
+	private String tecnica;
+	private float valore;
 	@ManyToMany(mappedBy="opere")
 	private List <Artista> artisti;
 
@@ -25,11 +28,11 @@ public class Opera {
 	public void setTitolo(String titolo) {
 		this.titolo = titolo;
 	}
-	public String getAnno() {
-		return anno;
+	public Date getPeriodo() {
+		return periodo;
 	}
-	public void setAnno(String anno) {
-		this.anno = anno;
+	public void setPeriodo(Date anno) {
+		this.periodo = anno;
 	}
 	public List<Artista> getArtisti() {
 		return artisti;
@@ -37,8 +40,17 @@ public class Opera {
 	public void setArtisti(List<Artista> artisti) {
 		this.artisti = artisti;
 	}
-
-
-
+	public String getTecnica() {
+		return tecnica;
+	}
+	public void setTecnica(String tecnica) {
+		this.tecnica = tecnica;
+	}
+	public float getValore() {
+		return valore;
+	}
+	public void setValore(float f) {
+		this.valore = f;
+	}
 
 }

@@ -2,48 +2,51 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="terminal.css" />
-<title>Nuovo Prodotto</title>
+<link href="bootstrap.css" type="text/css" rel="stylesheet">
+<title>Inserimento nuova opera</title>
 </head>
 <body>
-	<h1>/addNewProdotto (esercizio finale)</h1>
+	<h1>Inserisci nel catalogo una nuova opera</h1>
 	<hr>
 	<div align="center">
-		<form action="product" method="post">
+		<form action="opera" method="post">
 			<table>
 				<tr>
-					<td align="right">Nome*:</td>
-					<td><input type="text" name="name" 
-						autofocus="autofocus"
-						value="${product.name}" /></td>
-					<td>${errName}</td>
+					<td align="right">Titolo*:</td>
+					<td><input type="text" name="name" autofocus="autofocus" placeholder="titolo"
+								value="${opera.titolo}" /></td>
+					<td>${errTitolo}</td>
 				</tr>
+				
 				<tr>
-					<td align="right">Descrizione*:</td>
-					<td><input type="text" name="description"
-						value="${product.description}" /></td>
-					<td>${errDesc}</td>
+					<td align="right">Tecnica*:</td>
+					<td><input type="text" name="tecnica" placeholder = "tecnica usata" autofocus="autofocus"
+								value="${opera.tecnica}"/>						
+					<td>${errTecnica}</td>
 				</tr>
+					
 				<tr>
-					<td align="right">Prezzo*:</td>
-					<td><input type="text" name="price"
-						value="${product.price}" /></td>
-					<td>${errPrice}</td>
+					<td align="right">Valore*:</td>
+					<td><input type="text" name="valore" autofocus="autofocus" placeholder="valore"
+								value="${opera.valore}" />
+					</td>
+					<td>${errValore}</td>
 				</tr>
+				
 				<tr>
-					<td align="right">Data di scadenza*:</td>
-					<td><input type="date" name="expirationDate"
-						placeholder = "AAAA-MM-GG"
-						value="${product.expirationDate}" /></td>
-					<td>${errDate}</td>
+					<td align="right">Periodo *:</td> 
+					<td><input type="date" name="periodo" autofocus="autofocus" placeholder="a che periodo risale"
+								value="${opera.periodo}" /></td>
+					<td>${errPeriodo}</td>
 				</tr>
+		
 				<tr>
-					<td colspan ="3" align = "center">(* = campo obbligatorio)</td>
+					<div><td colspan ="3" align = "center">(* = campo obbligatorio)</td></div>
 				</tr>
 			</table>
-			<input type="submit" name="submit" value="INVIA" />
+			<td colspan="2" align="right"><input type="submit" name="submit" value="INVIA" class="btn btn-primary" /></td>
 		</form>
-		<a href = "product">Lista Prodotti</a>
+		<a href = "opera">Catalogo opere</a>
 	</div>
 </body>
 </html>
