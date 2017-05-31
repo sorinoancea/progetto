@@ -17,7 +17,10 @@ public class Artista {
 	private Date dataMorte;
 	@ManyToMany
 	private List<Opera> opere;
-     
+
+	
+	
+	
 	public Artista(){
 		this.opere = new ArrayList<>();
 	}

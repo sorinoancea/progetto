@@ -16,6 +16,10 @@ public class Opera {
 	private float dimensioni;
 	@ManyToMany(mappedBy="opere")
 	private List <Artista> artisti;
+	@OneToMany
+	private Amministratore amministratori;
+	@ManyToMany
+	private Percorso percorsi;
 
 	public Long getId() {
 		return id;
@@ -53,5 +57,31 @@ public class Opera {
 	public void setDimensione(float f) {
 		this.dimensioni = f;
 	}
+	public Date getAnnoRealizzazione() {
+		return annoRealizzazione;
+	}
+	public void setAnnoRealizzazione(Date annoRealizzazione) {
+		this.annoRealizzazione = annoRealizzazione;
+	}
+	public float getDimensioni() {
+		return dimensioni;
+	}
+	public void setDimensioni(float dimensioni) {
+		this.dimensioni = dimensioni;
+	}
+	public Amministratore getAmministratore() {
+		return amministratori;
+	}
+	public void setAministratori(Amministratore amministratori) {
+		this.amministratori = amministratori;
+	}
+	public Percorso getPercorsi() {
+		return percorsi;
+	}
+	public void setPercorsi(Percorso percorsi) {
+		this.percorsi = percorsi;
+	}
 
+	
+	
 }
