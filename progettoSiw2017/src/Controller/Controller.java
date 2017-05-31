@@ -17,7 +17,7 @@ public class Controller extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String nextPage="/index.jsp";
+		//String nextPage="/index.jsp";
 		String _nomeutente =request.getParameter("txtusername");
 		String _password =request.getParameter("txtpassword");
 		
@@ -36,23 +36,23 @@ public class Controller extends HttpServlet {
 		{
 			System.out.println("Errore :"+ex.getMessage());
 		}
-		nextPage="/opera.jsp";
+		//nextPage="/opera.jsp";
 		
-		
-		Opera opera=new Opera();
-		ArtistaValidator validator=new ArtistaValidator();
-		if(validator.validate(request)){
-		Long id=Long.parseLong(request.getParameter("id"));	
-			
-		}
-	
-	
-	
-		ServletContext application = getServletContext();
-		RequestDispatcher rd=application.getRequestDispatcher(nextPage);
-		rd.forward(request, response);
-		return;
-		
+//		
+//		Opera opera=new Opera();
+//		ArtistaValidator validator=new ArtistaValidator();
+//		if(validator.validate(request)){
+//		Long id=Long.parseLong(request.getParameter("id"));	
+//			
+//		}
+//	
+//	
+//	
+//		ServletContext application = getServletContext();
+//		RequestDispatcher rd=application.getRequestDispatcher(nextPage);
+//		rd.forward(request, response);
+//		return;
+//		
 	
 	}
 
