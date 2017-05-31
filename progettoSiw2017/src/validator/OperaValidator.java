@@ -48,7 +48,7 @@ public class OperaValidator {
 		} else {
 			try {
 				DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-				opera.setPeriodo(df.parse(descrizione));
+				opera.setRealizzazione(df.parse(descrizione));
 				if(df.parse(descrizione).compareTo(new Date()) > 0) {
 					request.setAttribute("errPeriodo", "Deve essere una data entro la data attuale!");
 					tuttoOk = false;

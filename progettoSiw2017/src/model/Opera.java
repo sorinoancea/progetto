@@ -10,7 +10,8 @@ public class Opera {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long id;   
 	private String titolo;
-	private Date periodo;
+	@Temporal(TemporalType.DATE)
+	private Date annoRealizzazione;
 	private String tecnica;
 	private float dimensioni;
 	@ManyToMany(mappedBy="opere")
@@ -28,11 +29,11 @@ public class Opera {
 	public void setTitolo(String titolo) {
 		this.titolo = titolo;
 	}
-	public Date getPeriodo() {
-		return periodo;
+	public Date getRealizzazione() {
+		return annoRealizzazione;
 	}
-	public void setPeriodo(Date anno) {
-		this.periodo = anno;
+	public void setRealizzazione(Date anno) {
+		this.annoRealizzazione = anno;
 	}
 	public List<Artista> getArtisti() {
 		return artisti;

@@ -11,7 +11,9 @@ public class Artista {
 	private String nome;
 	private String cognome;
 	private String nazionalità;
+	@Temporal(TemporalType.DATE)
 	private Date dataNascita;
+	@Temporal(TemporalType.DATE)
 	private Date dataMorte;
 	@ManyToMany
 	private List<Opera> opere;
