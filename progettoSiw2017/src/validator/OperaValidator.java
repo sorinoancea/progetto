@@ -18,6 +18,13 @@ public class OperaValidator {
 		String descrizione = request.getParameter("descrizione");
 		Opera opera = (Opera)request.getAttribute("opera");
 		
+		
+		/***
+		 * maeledagadhae ea
+		 * 
+		 * 
+		 */
+		
 		if(titolo == null || titolo.equals("")) {
 			request.setAttribute("errTitolo", "Campo obbligatorio");
 			tuttoOk = false;
