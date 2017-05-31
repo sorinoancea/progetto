@@ -9,7 +9,7 @@
 <body>
 		<h1>${opera.titolo}</h1>
 		<div>Tecnica usata: ${opera.tecnica}</div>
-		<div>Periodo (circa): ${opera.periodo }</div>
+		<div>Periodo (circa): ${opera.annoRealizzazione }</div>
 		<div>Valore (circa): &{opera.valore</div>
 </body>
 </html>

@@ -34,10 +34,10 @@
 				</tr>
 				
 				<tr>
-					<td align="right">Periodo *:</td> 
-					<td><input type="date" name="periodo" autofocus="autofocus" placeholder="a che periodo risale"
-								value="${opera.periodo}" /></td>
-					<td>${errPeriodo}</td>
+					<td align="right">Anno Realizzazione*:</td> 
+					<td><input type="date" name="annoRealizzazione" autofocus="autofocus" placeholder="a che periodo risale"
+								value="${opera.annoRealizzazione}" /></td>
+					<td>${errAnnoRealizzazione}</td>
 				</tr>
 		
 				<tr>
