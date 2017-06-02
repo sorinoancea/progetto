@@ -2,36 +2,39 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Autenticazione </title>
-	<link href="bootstrap.css" type="text/css" rel="stylesheet">
-
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Insert title here</title>
 </head>
-<body>	
-	<center><h1>Autenticazione</h1></center>
-	<br><br><br>
-			<form action="controller" method="post">
-			<table align="center">
-			<div>	<tr>
-				<th align="right"> Nome Utente :</th>
-				<td><input type="text" name="txtusername" placeholder="nome utente"></td>
-				</tr>
-			</div>
-			<div>
-				<tr>
-				<th align="right"> Password :</th>
-				<td><input type="password" name="txtpassword" placeholder="password"></td>
-				</tr>
-			</div>
-				<tr>
-					<td colspan="2" align="right"><input type="submit" value="Login" class="btn btn-primary"></td>
-				</tr>
-				
-			</table>
-			
-			
-			
-			</form>
-		
+<body>
+	<div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="controller">Galleria</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="controller">Home</a></li>
+              <li><a href="controller">Opere</a></li>
+              <li><a href="controller">Artisti</a></li>
+              <li><a href="controller">Accesso al sito </a></li>
+              <li><a href="controller">Contatti </a></li>
+              
+            </ul>
 
-</body>
+          </div>
+        </div>
+      </nav>
+
+      <div class="jumbotron">
+        <h1>Galleria di arte moderna </h1>
+        <p> Collezione di arte di diverso stile</p>
+
+      </div>
+
+    </div>
 </html>

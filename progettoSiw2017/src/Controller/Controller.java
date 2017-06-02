@@ -1,5 +1,11 @@
 package Controller;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.ui.ModelMap;
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -16,9 +22,9 @@ public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		//String nextPage="/index.jsp";
-		String _nomeutente =request.getParameter("txtusername");
+	
+		String nextPage="/index.jsp";
+	/*	String _nomeutente =request.getParameter("txtusername");
 		String _password =request.getParameter("txtpassword");
 		
 		try{
@@ -44,20 +50,21 @@ public class Controller extends HttpServlet {
 //		if(validator.validate(request)){
 //		Long id=Long.parseLong(request.getParameter("id"));	
 //			
-//		}
-//	
-//	
-//	
-//		ServletContext application = getServletContext();
-//		RequestDispatcher rd=application.getRequestDispatcher(nextPage);
-//		rd.forward(request, response);
-//		return;
-//		
+		}*/
+
+		ServletContext application = getServletContext();
+		RequestDispatcher rd=application.getRequestDispatcher(nextPage);
+		rd.forward(request, response);
+  	return;
+ 
+		
+
 	
 	}
 
 	
-	
+
+		
 	protected void doget(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
